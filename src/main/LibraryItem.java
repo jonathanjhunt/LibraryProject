@@ -28,4 +28,13 @@ public class LibraryItem {
 		this.itemID = numberOfItems;
 		numberOfItems++;
 	}
-}
+	
+	public void setinLibrary(boolean checkedOut)
+	{
+		this.inLibrary = checkedOut;
+	}
+	public boolean getinLibrary()
+	{
+		return inLibrary;
+	}
+	

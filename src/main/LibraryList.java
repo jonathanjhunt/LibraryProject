@@ -16,10 +16,32 @@ public class LibraryList {
 		return this.items.add(item);
 	}
 	
+	
+	public boolean removeItem(LibraryItem item)
+	{
+		return this.items.remove(item);
+	}
+	
+	public Object listItem(LibraryItem item)
+	{
+		return this.items.toArray();
+	}
 	@Override
 	public String toString() 
 	{
 		return "ItemList [items=" + items + "]";
 	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return this.items.size();
+	}
+
+	public char[] get(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 	
 }

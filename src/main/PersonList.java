@@ -16,6 +16,10 @@ public class PersonList {
 		return this.persons.add(person);
 	}
 	
+	public boolean removePerson(Person person)
+	{
+		return this.persons.remove(person);
+	}
 	@Override
 	public String toString() 
 	{

@@ -16,12 +16,13 @@ public class Runner {
 		personlist.addPerson(person2);
 		personlist.addPerson(person3);
 		personlist.addPerson(person4);
+		personlist.removePerson(person4);
 		
-		Maps item1 = new Maps("Map of London", "Maps UK", "Maps", true, 5, 1, "United Kingdom");
-		Books item2 = new Books("A song of Ice and Fire", "George RR Martin", "Books", true, 5, 2,true);
-		Books item3 = new Books("Harry Potter & the Philosophers Stone", "J K Rowling", "Books", true, 2, 3, false);
-		Maps item4 = new Maps("Map of France", "Maps FR", "Maps", true, 5, 4, "France");
-		Newspapers item5 = new Newspapers("Daily Star", "Daily Star", "Newspapers", true, 1, 5, 20122003);
+		LibraryItem item1 = new Maps("Map of London", "Maps UK", "Maps", true, 5, 1, "United Kingdom");
+		LibraryItem item2 = new Books("A song of Ice and Fire", "George RR Martin", "Books", true, 5, 2,true);
+		LibraryItem item3 = new Books("Harry Potter & the Philosophers Stone", "J K Rowling", "Books", true, 2, 3, false);
+		LibraryItem item4 = new Maps("Map of France", "Maps FR", "Maps", true, 5, 4, "France");
+		LibraryItem item5 = new Newspapers("Daily Star", "Daily Star", "Newspapers", true, 1, 5, 20122003);
 		
 		LibraryList librarylist = new LibraryList();
 		
@@ -30,10 +31,17 @@ public class Runner {
 		librarylist.addItem(item3);
 		librarylist.addItem(item4);
 		librarylist.addItem(item5);
-		
+		librarylist.removeItem(item3);
 		
 		System.out.println(personlist);
-		System.out.println(librarylist);
+		System.out.println(librarylist.toString(librarylist));
+		
+		System.out.println(item1.getinLibrary());
+		item1.setinLibrary(false);
+		System.out.println(item1.getinLibrary());
+	}
+		
+		
 	}
 
-}
+
